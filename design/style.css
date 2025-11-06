@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --p-color: hsl(212, 6%, 44%);
+    --h-color: hsl(234, 12%, 34%)
+}
+body {
+    text-align: center;
+    background-color: hsl(0, 0%, 95%);
+    padding: 50px 0;
+}
+.t1 {
+    color: var(--p-color);
+    font-weight: normal;
+}
+.t2 {
+    color: var(--h-color);
+    margin-bottom: 15px;
+}
+.main-p {
+    color: var(--h-color);
+    font-size: 15px;
+    width: 40%;
+    justify-self: center;
+}
+section:not(.col) {
+    margin: 50px 125px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(calc(90% / 3), 1fr));
+    gap: 30px;
+}
+div {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0 10px 20px hsl(0, 6%, 85%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.sup {
+    border-top: 5px solid hsl(180, 62%, 55%);
+    margin: auto 0;
+}
+.team {
+    border-top: 5px solid hsl(0, 78%, 62%);
+    margin-bottom: 20px;
+}
+.karm {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.calc {
+    border-top: 5px solid hsl(212, 86%, 64%);
+    margin: auto 0;
+}
+.heading {
+    color: var(--h-color);
+    margin: 30px 0 5px 30px;
+    text-align: left;
+}
+.parag {
+    color: var(--p-color);
+    margin: 0 30px 20px 30px;
+    text-align: left;
+}
+img {
+    width: 60px;
+    position: absolute;
+    bottom: 35px;
+    right: 30px
+}
+footer p {
+    color: var(--p-color);
+    font-size: 15px !important;
+}
+footer p a {
+    color: var(--h-color) !important;
+    font-size: 17px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-decoration: none;
+}
+@media (max-width: 1100px) {
+    section:not(.col) {
+        grid-template-columns: repeat(2, minmax(40%, 1fr));
+        margin: 50px;
+    }
+    div {
+        margin: 0 0 20px 0 !important;
+    }
+    .calc {
+        margin-top: -300px !important;
+    }
+}
+@media (max-width: 800px) {
+    section:not(.col) {
+        grid-template-columns: minmax(100%, 1fr);
+        grid-template-rows: 250px 815px;
+        margin: 50px;
+    }
+    div {
+        margin: 0 0 20px 0 !important;
+    }
+    .calc {
+        margin-top: -300px !important;
+    }
+    .main-p {
+        width: 60%;
+    }
+    footer p {
+        font-size: 10px !important;
+    }
+    footer p a {
+        font-size: 12px;
+    }
+}
+@media (max-width: 410px) {
+    footer p {
+        font-size: 8px !important;
+    }
+    footer p a {
+        font-size: 10px;
+        vertical-align: middle !important;
+    }
+    img {
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        left: 50%;
+        bottom: 25px;
+    }
+    .parag {
+        font-size: 15px;
+    }
+}
